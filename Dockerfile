@@ -14,7 +14,7 @@ RUN set -xe \
 &&  ./vcpkg install \
     qt3d \
     qt5compat \
-    qtbase[brotli concurrent cups dnslookup doubleconversion egl fontconfig framework freetype gles2 gles3 glib gtk3 gui harfbuzz icu jpeg network opengl openssl pcre2 png securetransport sql testlib thread vulkan widgets xcb xkb xlib xrender zstd] \
+    qtbase[brotli,concurrent,cups,dnslookup,doubleconversion,egl,fontconfig,freetype,gles2,gles3,glib,gtk3,gui,harfbuzz,icu,jpeg,network,opengl,openssl,pcre2,png,sql,testlib,thread,vulkan,widgets,xcb,xkb,xlib,xrender,zstd] \
     qtcharts \
     qtcoap \
     qtconnectivity \
