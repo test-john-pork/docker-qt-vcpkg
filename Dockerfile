@@ -10,7 +10,7 @@ RUN set -xe \
 &&  export DEBIAN_FRONTEND=noninteractive \
     apk update \
 &&  apk add --no-cache \
-    git clang autoconf automake libtool openssl-dev dpkg zlib-dev libffi-dev zip autoconf libcap zstd-dev python3 cmake curl \
+    git clang autoconf automake libtool openssl-dev dpkg zlib-dev libffi-dev zip autoconf libcap zstd-dev python3 cmake curl ninja \
 &&  cd /opt \
 &&  git clone -b 2025.04.09 https://github.com/microsoft/vcpkg.git \
 &&  cd vcpkg \
