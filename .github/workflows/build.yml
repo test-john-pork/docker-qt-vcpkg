@@ -40,10 +40,10 @@ jobs:
                 ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKERHUB_REPOSITORY }}
 
               tags: |
-                type=ref,event=branch
-                type=ref,event=pr
                 type=semver,pattern={{version}}
                 type=semver,pattern={{major}}.{{minor}}
+                type=ref,event=branch
+                type=ref,event=pr
 
           - name: Runner Cache
             id: runner-cache
