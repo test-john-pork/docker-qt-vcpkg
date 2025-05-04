@@ -27,7 +27,6 @@ RUN set -xe \
     qthttpserver \
     qtimageformats \
     qtinterfaceframework \
-    qtlanguageserver \
     qtlocation \
     qtlottie \
     qtmqtt \
