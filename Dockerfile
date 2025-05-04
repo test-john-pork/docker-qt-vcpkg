@@ -15,9 +15,9 @@ RUN set -xe \
 &&  curl -Lo cmake-$CMAKE_VERSION.tar.gz https://github.com/Kitware/CMake/archive/refs/tags/v$CMAKE_VERSION.tar.gz \
 &&  tar -zxvf cmake-$CMAKE_VERSION.tar.gz \
 &&  cd CMake-$CMAKE_VERSION \
-&&  ./bootstrap \
-&&  make -j$(nproc) \
-&&  make -j$(nproc) install \
+&&  ./bootstrap >\dev\null \
+&&  make -j$(nproc) >\dev\null \
+&&  make -j$(nproc) install >\dev\null \
 &&  update-alternatives --install /usr/bin/cmake cmake /usr/local/bin/cmake 1 --force \
 &&  cd /tmp \
 &&  curl -lo Python-3.13.3.tgz https://www.python.org/ftp/python/3.13.3/Python-3.13.3.tgz \
