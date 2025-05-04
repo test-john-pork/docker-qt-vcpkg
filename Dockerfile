@@ -10,7 +10,7 @@ RUN set -xe \
 &&  export DEBIAN_FRONTEND=noninteractive \
     apk update \
 &&  apk add --no-cache \
-    git clang autoconf automake libtool openssl-dev dpkg zlib-dev libffi-dev zip autoconf libcap zstd-dev python3 cmake curl make \
+    git clang autoconf automake libtool openssl-dev dpkg zlib-dev libffi-dev zip autoconf libcap zstd-dev python3 cmake curl make bash \
 &&  cd /opt \
 &&  git clone -b release https://github.com/ninja-build/ninja.git \
 &&  cd ninja \
