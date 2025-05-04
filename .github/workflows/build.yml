@@ -1,12 +1,12 @@
 name: Build and Push Docker Image
 on:
     push:
+        tags:
+            - '*'
         branches:
             - 'main'
             - 'test'
             - 'release/**'
-        tags:
-            - '*'
 env:
     REGISTRY: ghcr.io
     IMAGE_NAME: ${{ github.repository }}
@@ -44,6 +44,7 @@ jobs:
                 type=semver,pattern={{major}}.{{minor}}
                 type=ref,event=branch
                 type=ref,event=pr
+                type=raw,value=latest,enable={{is_default_branch}}
 
           - name: Runner Cache
             id: runner-cache
