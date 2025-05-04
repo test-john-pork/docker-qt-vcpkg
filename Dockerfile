@@ -13,4 +13,5 @@ RUN set -xe \
 &&  cd /opt \
 &&  git clone -b 2025.04.09 https://github.com/microsoft/vcpkg.git \
 &&  cd vcpkg \
-&&  ./bootstrap-vcpkg.sh
+&&  ./bootstrap-vcpkg.sh \
+&&  vcpkg install qt
