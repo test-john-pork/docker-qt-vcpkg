@@ -12,7 +12,7 @@ RUN set -xe \
 &&  CC=clang \
 &&  CXX=clang++ \
 &&  ./vcpkg install \
-    qtbase[brotli,concurrent,cups,dnslookup,doubleconversion,egl,fontconfig,freetype,gles2,gles3,gtk3,gui,harfbuzz,icu,jpeg,network,opengl,openssl,pcre2,png,sql,testlib,thread,vulkan,widgets,xcb,xkb,xlib,xrender,zstd] \
+    qtbase[brotli,concurrent,cups,dnslookup,doubleconversion,egl,fontconfig,freetype,gles2,gles3,gui,harfbuzz,icu,jpeg,network,opengl,openssl,pcre2,png,sql,testlib,thread,vulkan,widgets,xcb,xkb,xlib,xrender,zstd] \
     &&  echo "install qt: OK"
     # qt3d \
     # qt5compat \
