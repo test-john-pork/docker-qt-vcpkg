@@ -14,8 +14,8 @@ RUN set -xe \
 &&  cd /opt \
 &&  git clone -b release https://github.com/ninja-build/ninja.git \
 &&  cd ninja \
-&&  cmake -Bbuild-cmake
-&&  cmake --build build-cmake
+&&  cmake -Bbuild-cmake \
+&&  cmake --build build-cmake \
 &&  update-alternatives --install /usr/bin/ninja ninja /opt/ninja/build-cmake/ninja 1 --force \
 &&  cd /opt \
 &&  git clone -b 2025.04.09 https://github.com/microsoft/vcpkg.git \
