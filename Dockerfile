@@ -10,10 +10,10 @@ RUN set -xe \
 &&  export DEBIAN_FRONTEND=noninteractive \
 &&  cd /opt/vcpkg \
 &&  ./vcpkg install \
-    qtbase[core,icu] \
+    qtbase[core,icu] &&  echo "install qt: OK" \
 ||  cat /opt/vcpkg/buildtrees/icu/config-x64-linux-dbg* ; \
     false \
-    &&  echo "install qt: OK"
+    
     # qtbase[core,dnslookup,doubleconversion,egl,fontconfig,freetype,gles2,gles3,gui,harfbuzz,icu,jpeg,network,opengl,openssl,pcre2,png,sql,testlib,thread,vulkan,widgets,xcb,xkb,xlib,xrender,zstd] \
     # qt3d \
     # qt5compat \
