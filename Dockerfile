@@ -9,8 +9,6 @@ WORKDIR /root
 RUN set -xe \
 &&  export DEBIAN_FRONTEND=noninteractive \
 &&  cd /opt/vcpkg \
-&&  CC=clang \
-&&  CXX=clang++ \
 &&  ./vcpkg install \
     qtbase[core,icu] \
 ||  cat /opt/vcpkg/buildtrees/icu/config-x64-linux-dbg* ; \
