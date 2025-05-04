@@ -8,6 +8,7 @@ WORKDIR /root
 
 RUN set -xe \
 &&  export DEBIAN_FRONTEND=noninteractive \
+&&  apk add autoconf-archive \
 &&  cd /opt/vcpkg \
 &&  ./vcpkg install \
     qtbase[core,icu] &&  echo "install qt: OK" \
