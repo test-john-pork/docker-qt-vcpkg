@@ -10,11 +10,9 @@ RUN set -xe \
 &&  export DEBIAN_FRONTEND=noninteractive \
 &&  apk add autoconf-archive \
 &&  cd /opt/vcpkg \
-&&  ./vcpkg install wayland xcb \
 &&  ./vcpkg install \
-    qtbase[core,vulkan] || ( cat /opt/vcpkg/buildtrees/vulkan-loader/config-x64-linux-* && sleep 10 && false ) \
+    qtbase[core,dnslookup,doubleconversion,egl,fontconfig,freetype,gles2,gles3,gui,harfbuzz,icu,jpeg,network,opengl,openssl,pcre2,png,sql,testlib,thread,widgets,xcb,xkb,xlib,xrender,zstd] \
 &&  echo "install qt: OK" 
-    # qtbase[core,dnslookup,doubleconversion,egl,fontconfig,freetype,gles2,gles3,gui,harfbuzz,icu,jpeg,network,opengl,openssl,pcre2,png,sql,testlib,thread,vulkan,widgets,xcb,xkb,xlib,xrender,zstd] \
     # qt3d \
     # qt5compat \
     # qtcharts \
