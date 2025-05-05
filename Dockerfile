@@ -12,7 +12,7 @@ RUN set -xe \
 &&  cd /opt/vcpkg \
 &&  ./vcpkg install xcb \
 &&  ./vcpkg install \
-    qtbase[core,vulkan] || ( cat /opt/vcpkg/buildtrees/vulkan-loader/config-x64-linux-* && false ) \
+    qtbase[core,vulkan] || ( cat /opt/vcpkg/buildtrees/vulkan-loader/config-x64-linux-* && sleep 10 && false ) \
 &&  echo "install qt: OK" 
     # qtbase[core,dnslookup,doubleconversion,egl,fontconfig,freetype,gles2,gles3,gui,harfbuzz,icu,jpeg,network,opengl,openssl,pcre2,png,sql,testlib,thread,vulkan,widgets,xcb,xkb,xlib,xrender,zstd] \
     # qt3d \
