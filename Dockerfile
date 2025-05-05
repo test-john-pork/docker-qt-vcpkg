@@ -8,10 +8,10 @@ WORKDIR /root
 
 RUN set -xe \
 &&  export DEBIAN_FRONTEND=noninteractive \
-&&  apk add autoconf-archive \
+&&  apk add autoconf-archive xcb \
 &&  cd /opt/vcpkg \
 &&  ./vcpkg install \
-    qtbase[core,vulkan] || cat /opt/vcpkg/buildtrees/vulkan-loader/config-x64-linux-* \
+    qtbase[core,vulkan] || ( cat /opt/vcpkg/buildtrees/vulkan-loader/config-x64-linux-* && false ) \
 &&  echo "install qt: OK" 
     # qtbase[core,dnslookup,doubleconversion,egl,fontconfig,freetype,gles2,gles3,gui,harfbuzz,icu,jpeg,network,opengl,openssl,pcre2,png,sql,testlib,thread,vulkan,widgets,xcb,xkb,xlib,xrender,zstd] \
     # qt3d \
