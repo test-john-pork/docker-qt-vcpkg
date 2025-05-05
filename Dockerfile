@@ -10,7 +10,7 @@ RUN set -xe \
 &&  export DEBIAN_FRONTEND=noninteractive \
 &&  apk add autoconf-archive \
 &&  cd /opt/vcpkg \
-&&  ./vcpkg install xcb \
+&&  ./vcpkg install wayland xcb \
 &&  ./vcpkg install \
     qtbase[core,vulkan] || ( cat /opt/vcpkg/buildtrees/vulkan-loader/config-x64-linux-* && sleep 10 && false ) \
 &&  echo "install qt: OK" 
