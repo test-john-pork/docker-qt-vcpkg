@@ -11,7 +11,7 @@ RUN set -xe \
 &&  apk add autoconf-archive \
 &&  cd /opt/vcpkg \
 &&  ./vcpkg install \
-    qtbase[core,dnslookup,doubleconversion,egl,fontconfig,freetype,gles2,gles3,gui,harfbuzz,icu,jpeg,network,opengl,openssl,pcre2,png,sql,testlib,thread,widgets,xcb,xkb,xlib,xrender,zstd] \
+    qtbase[core,dnslookup,doubleconversion,egl,fontconfig,freetype,gles2,gles3,gui,harfbuzz,icu,jpeg,network,opengl,openssl,pcre2,png,sql,testlib,thread,widgets,xcb,xkb,xlib,xrender,zstd] || cat /opt/vcpkg/buildtrees/qtbase/config-x64-linux-* \
 &&  echo "install qt: OK" 
     # qt3d \
     # qt5compat \
