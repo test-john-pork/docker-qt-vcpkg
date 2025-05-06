@@ -8,7 +8,7 @@ WORKDIR /root
 
 RUN set -xe \
 &&  export DEBIAN_FRONTEND=noninteractive \
-&&  apk add autoconf-archive linux-headers libx11-dev libxrender-dev libxi-dev libxkbcommon-dev mesa-dev \
+&&  apk add autoconf-archive linux-headers libx11-dev libxrender-dev libxi-dev libxkbcommon-dev mesa-dev unzip openssl-dev autoconf musl-dev \
 &&  cd /opt/vcpkg \
 &&  ./vcpkg install \
     qtbase[core,dnslookup,doubleconversion,egl,fontconfig,freetype,gles2,gles3,gui,harfbuzz,icu,jpeg,network,opengl,openssl,pcre2,png,sql,testlib,thread,widgets,xcb,xkb,xlib,xrender,zstd] || cat /opt/vcpkg/buildtrees/qtbase/config-x64-linux-* \
